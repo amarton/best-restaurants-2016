@@ -1,0 +1,45 @@
+/* Tophat */
+
+#tophat
+	height: 40px
+	background-color: $tophat-bg
+	overflow: hidden
+	border-bottom: 1px solid #333
+
+#logo
+	width: 250px
+	height: 100%
+	float: left
+	line-height: 43px
+	vertical-align: middle
+	img
+		margin: 0 10px
+		width: 90%
+	@media (max-width: 400px)
+		width: 200px
+
+.tophat-share-tools
+	line-height: 35px
+	font-size: 30px
+	color: $tophat-social
+	margin-bottom: 10px
+	span
+		cursor: pointer
+		vertical-align: middle
+		margin-right: 8px
+		&:hover
+			color: $tophat-social--hover
+	@media (max-width: 760px)
+		font-size: 18px
+		line-height: 40px
+
+
+/* Leaderboard */
+
+#leaderboard
+	+size(728px 90px)
+	background-color: #222222
+	margin: 60px auto 0 auto
+	text-align: center
+	@media (max-width: 730px)
+		display: none

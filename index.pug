@@ -1,0 +1,134 @@
+extends _base.pug
+
+block link
+	- var selected = "Top Five";
+
+
+block content
+	.container
+
+		.top-ten
+			figure.fv__video
+				iframe(src="https://player.vimeo.com/video/181639444?autoplay=1&title=0&byline=0&portrait=0" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+			hr
+
+			//- Two Across
+			.row.tt-row
+
+				.col-sm-6.tt-rest
+					.tt-rest__image.-fill
+						.featured-video
+							figure.fv__video
+								iframe(src="https://player.vimeo.com/video/182243155?title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+							.overlay-charleston.fv__overlay 
+								img(src="images/restaurants/top-ten/charleston.jpg" border="0")
+							#charleston.btn-charleston.fv__play-btn
+						//a(href="http://dish.baltimoresun.com/restaurant/45-charleston/" target="_blank")
+							img(src="images/restaurants/top-ten/charleston.jpg" border="0")
+					.tt-rest__info
+						.tt-rest__info__main
+							.tt-rest__name
+								span.number 1
+								a(href="http://dish.baltimoresun.com/restaurant/45-charleston/" target="_blank") Charleston
+							.tt-rest__neighborhood Harbor East
+						.tt-rest__blurb After almost 20 years, this esteemed harbor-side restaurant has never rested on its laurels. Chef and multiple James Beard award nominee Cindy Wolf, who owns the luxe spot with business partner Tony Foreman, can be seen in the open kitchen almost every night, guiding her staff through the preparation of dishes like the ethereal lobster soup, grilled veal sweetbreads and signature shrimp and grits. The extensive wine selection and polished service add to the A-plus experience.
+
+						.tt-rest__arrow
+							a(href="http://dish.baltimoresun.com/restaurant/45-charleston/" target="_blank")
+								span.icon-arrow-right
+
+				.col-sm-6.tt-rest
+					.tt-rest__image.-fill
+						.featured-video
+							figure.fv__video
+								iframe(src="https://player.vimeo.com/video/182244106?title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+							.overlay-prime.fv__overlay 
+								img(src="images/restaurants/top-ten/prime-rib.jpg" border="0")
+							#prime.btn-prime.fv__play-btn
+						//a(href="http://dish.baltimoresun.com/restaurant/112-prime-rib/" target="_blank")
+						//	img(src="images/restaurants/top-ten/prime-rib--mobile.jpg" border="0")
+					.tt-rest__info
+						.tt-rest__info__main
+							.tt-rest__name
+								span.number 2
+								a(href="http://dish.baltimoresun.com/restaurant/112-prime-rib/" target="_blank") The Prime Rib
+							.tt-rest__neighborhood Midtown-Belvedere
+						.tt-rest__blurb There’s a lot of beef competition in town, but none is better than the aged slabs consumed at Prime Rib, a Baltimore mainstay since 1965. The eponymous prime rib is a thick hunk of buttery meat that fills a plate. The fish offerings are just as picture perfect. The restaurant’s surroundings, with a baby grand piano, dramatic paintings and leopard-patterned carpet are as old school and retro cool as they come. Potent martinis are de rigueur.
+
+						.tt-rest__arrow
+							a(href="http://dish.baltimoresun.com/restaurant/112-prime-rib/" target="_blank")
+								span.icon-arrow-right
+
+			//- Full-width image
+			.row.tt-row
+				.col-sm-12.tt-rest
+					.tt-rest__image.-fill
+						.featured-video
+							figure.fv__video
+								iframe(src="https://player.vimeo.com/video/183368470?title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+							.overlay-woodberry.fv__overlay 
+								img.-desktop-only(src="images/restaurants/top-ten/woodberry-kitchen--desktop.jpg" border="0")
+								img.-mobile(src="images/restaurants/top-ten/woodberry-kitchen--mobile.jpg" border="0")
+							#woodberry.btn-woodberry.fv__play-btn
+						//a(href="http://dish.baltimoresun.com/restaurant/119-woodberry-kitchen/" target="_blank")
+							img.-desktop-only(src="images/restaurants/top-ten/woodberry-kitchen--desktop.jpg" border="0")
+							img.-mobile(src="images/restaurants/top-ten/woodberry-kitchen--mobile.jpg" border="0")
+					.row.tt-rest__info
+						.col-sm-3.tt-rest__info__main
+							.tt-rest__name
+								span.number 3
+								a(href="http://dish.baltimoresun.com/restaurant/119-woodberry-kitchen/" target="_blank") Woodberry Kitchen
+							.tt-rest__neighborhood Woodberry
+						.col-sm-9.tt-rest__blurb James Beard award-winning chef Spike Gjerde hit a homerun right off the bat in 2007 with Woodberry Kitchen. The refurbished warehouse combines an industrial brick and farmhouse vibe that pairs well with Gjerde’s local sourcing ethos. His commitment to seasonal foods and bounty from the Chesapeake Bay has brought him attention from all over the country. Lucky for Baltimore, he’s right in our neighborhood.
+
+						.tt-rest__arrow
+							a(href="http://dish.baltimoresun.com/restaurant/119-woodberry-kitchen/" target="_blank")
+								span.icon-arrow-right
+
+			//- One across, image & text L-R
+			.row.tt-row
+				.tt-rest
+					.col-sm-6.tt-rest__image
+						.featured-video
+							figure.fv__video
+								iframe(src="https://player.vimeo.com/video/182245459?title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+							.overlay-ouzo.fv__overlay 
+									img(src="images/restaurants/top-ten/ouzo.jpg" border="0")
+							#ouzo.btn-ouzo.fv__play-btn
+						//a(href="http://dish.baltimoresun.com/restaurant/76-ouzo-bay/" target="_blank")
+							img(src="images/restaurants/top-ten/la-cuchara.jpg" border="0")
+					.col-sm-6.tt-rest__info
+						.tt-rest__info__main
+							.tt-rest__name
+								span.number 4
+								a(href="http://dish.baltimoresun.com/restaurant/76-ouzo-bay/" target="_blank") Ouzo Bay
+							.tt-rest__neighborhood Harbor East
+						.tt-rest__blurb Ouzo Bay came onto the Harbor East scene four years ago and quickly drew crowds to the exquisite dining room and bar outfitted in marble, hand-blown glass lighting and mosaic-tile floors. The Greek food lived up to the scenery with showstoppers like saganaki tiganito, a cheese appetizer flamed tableside; grilled Mediterranean bronzino; and slow-braised lamb shank. Its popularity led Atlas Restaurant Group owners Alex Smith and George Aligeorgas to open a similar restaurant in Boca Raton, Fla.
+
+						.tt-rest__arrow
+							a(href="http://dish.baltimoresun.com/restaurant/76-ouzo-bay/" target="_blank")
+								span.icon-arrow-right
+
+			//- One across, image & text R-L
+			.row.tt-row
+				.tt-rest
+					.col-sm-6.col-sm-push-6.tt-rest__image
+						.featured-video
+							figure.fv__video
+								iframe(src="https://player.vimeo.com/video/183354456?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+							.overlay-wit-wisdom.fv__overlay 
+									img(src="images/restaurants/top-ten/wit-wisdom.jpg" border="0")
+							#wit-wisdom.btn-wit-wisdom.fv__play-btn
+						//a(href="http://dish.baltimoresun.com/restaurant/83-wit----wisdom/" target="_blank")
+							img(src="images/restaurants/top-ten/linwoods.jpg" border="0")
+					.col-sm-6.col-sm-pull-6.tt-rest__info
+						.tt-rest__info__main
+							.tt-rest__name
+								span.number 5
+								a(href="http://dish.baltimoresun.com/restaurant/83-wit----wisdom/" target="_blank") Wit &amp; Wisdom
+							.tt-rest__neighborhood Harbor East
+						.tt-rest__blurb Celebrity chef Michael Mina may have brought his star power and expertise to the sleek restaurant and menu at Four Seasons Baltimore, but executive chef Zack Mills does the day-in and day-out heavy lifting in the kitchen. The innovative American tavern cuisine features dishes like Michael’s Maine lobster pot pie, Chesapeake rockfish and a six-ounce local Gunpowder bison filet. The modern dining room with a dramatic view of the harbor sets the stage for a stellar meal.
+
+						.tt-rest__arrow
+							a(href="http://dish.baltimoresun.com/restaurant/83-wit----wisdom/" target="_blank")
+								span.icon-arrow-right

@@ -1,0 +1,109 @@
+/* Full List          */
+/* ------------------ */
+/* prefixed with .fl- */
+
+//Breakpoints
+$fl-bp-1: 1000px
+$fl-bp-2: 850px
+$fl-bp-3: 767px
+$fl-bp-4: 500px
+
+.full-list
+	+clearfix
+
+.fl
+
+	&-rest
+		display: table
+		width: 50%
+		float: left
+		border: 1px solid $bordercolor
+		border-width: 0 0 1px 0
+
+		@media (max-width: $fl-bp-3)
+			float: none
+			width: 100%
+			&:last-child
+				border-width: 0
+
+		@media (min-width: $fl-bp-3 + 1)
+
+			//Prevent awkward floating on uneven heights
+			&:nth-child(odd)
+				border-width: 1px 1px 0 0
+				clear: both
+
+			//Switch border from right to left the right column,
+			//move left one pixel to overlap borders
+			&:nth-child(even)
+				border-width: 1px 0 0 1px
+				margin-left: -1px
+
+			//Eliminate top border from first two blocks
+			&:nth-child(-n + 2)
+				border-top: none
+
+			&:hover
+				background-color: #1a1a1a
+				img
+					transform: translate3d(-2px, -2px, 0)
+					box-shadow: 7px 7px 0 darken($red-3, 5%)				
+
+
+		+links(white, none)
+		a
+			display: block
+			padding: 40px 20px
+			@media (max-width: $fl-bp-4)
+				padding: 20px 0
+
+	
+		&__image
+			display: table-cell
+			vertical-align: top
+			width: 195px
+			padding: 0 15px 0 0
+			@media (max-width: $fl-bp-1) and (min-width: $fl-bp-2 + 1)
+				width: 165px
+			@media (max-width: $fl-bp-2) and (min-width: $fl-bp-3 + 1)
+				width: 105px
+			@media (max-width: $fl-bp-4)
+				width: 100px
+
+			img
+				width: 100%
+				width: calc(100% - 3px) //accommodates box-shadow
+				box-shadow: 3px 3px 0 $red-3
+				transform: translate3d(0, 0, 0)
+				transition: all 0.3s ease	
+
+		&__info
+			display: table-cell
+			vertical-align: top	
+
+		&__name
+			margin: 5px 0 10px 0
+			font:
+				size: 32px
+				weight: 300
+			@media (max-width: $fl-bp-1) and (min-width: $fl-bp-3 + 1)
+				font-size: 26px
+			@media (max-width: $fl-bp-2)
+				margin-top: 0
+			@media (max-width: $fl-bp-4)
+				font-size: 20px
+		
+		&__neighborhood
+			font-size: 18px
+			color: #999
+			text-transform: uppercase
+			margin-bottom: 10px
+			@media (max-width: $fl-bp-1) and (min-width: $fl-bp-3 + 1)
+				font-size: 14px
+			@media (max-width: $fl-bp-4)
+				font-size: 14px
+		
+		&__ranked
+			color: $gold
+			
+

@@ -1,0 +1,19 @@
+extends _base.pug
+
+block link
+	- var selected = "Lists";
+
+block content
+	- var galleries = [{"name":"10 meals under $10","photo":"images/galleries/bar-food.jpg","url":"#"},{"name":"25 best bars","photo":"images/galleries/bar-food.jpg","url":"#"},{"name":"Best crab dishes","photo":"images/galleries/breakfast.jpg","url":"#"},{"name":"Best atmosphere","photo":"images/galleries/casual.jpg","url":"#"},{"name":"Favorite servers","photo":"images/galleries/personality.jpg","url":"#"},{"name":"Suzanne's favorite dishes","photo":"images/galleries/bar-food.jpg","url":"#"}];
+
+	.container
+	
+		.galleries
+
+			each gallery in galleries
+
+				.gallery
+					a(href=gallery.url target="_blank")
+						.gallery__image
+								img(width="500" src=gallery.photo)
+						.gallery__name= gallery.name

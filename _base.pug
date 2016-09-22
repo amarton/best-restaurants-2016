@@ -1,0 +1,115 @@
+doctype html
+//if lt IE 7
+	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+	<html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+	<html class="no-js lt-ie9">
+
+html(class="no-js", lang="en")
+
+	head
+
+		//Basic page needs
+		meta(charset="utf-8")
+		title
+		meta(name="description", content="")
+		meta(name="author", content="")
+
+		//Mobile Specific Metas
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+		//CSS
+		link(rel="stylesheet", type="text/css", href="stylesheets/style.css")
+
+		//Fonts
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Lato:300,400,700")
+
+		//Facebook Stuff
+		meta(property="og:title", content="The Baltimore Sun's Top 50 Restaurants - 2016")
+		meta(property="og:url", content="http://dish.baltimoresun.com/best-restaurants-2016/")
+		meta(property="og:image", content="http://dish.baltimoresun.com/best-restaurants-2016/images/restaurants/top-ten/azumi.jpg")
+		meta(property="og:site_name", content="The Baltimore Sun")
+		meta(property="og:description", content="Hungry? Explore the best Baltimore has to offer in this curated list from The Sun.")
+		meta(property="fb:app_id", content="310302989040998")
+
+		//Twitter Stuff
+		meta(name="twitter:card" content="summary_large_image")
+		meta(name="twitter:site" content="@baltsunarts")
+		meta(name="twitter:creator" content="@baltsundata")
+		meta(name="twitter:title", content="The Baltimore Sun's Top 50 Restaurants - 2016")
+		meta(name="twitter:description", content="Hungry? Explore the best Baltimore has to offer in this curated list from @baltimoresun.")
+		meta(name="twitter:image", content="http://dish.baltimoresun.com/best-restaurants-2016/images/restaurants/top-ten/azumi.jpg")
+		meta(name="twitter:domain", content="baltimoresun.com")
+		
+
+		//Omniture Code
+		include includes/omniture.html
+
+		//BS Ad Code
+		include includes/ad-for-header.html
+
+	body
+		script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
+		div(data-trb-thirdpartynav)
+			//.tophat-share-tools
+				span.icon-facebook
+				span.icon-twitter
+		#leaderboard
+			include includes/ad-for-body.html
+
+		header.page-head
+			h1.page-head__title 50 Best
+			img.page-head__logo(src="images/logo.png")
+			h1.page-head__title Restaurants
+			.tophat-share-tools
+				span.icon-facebook
+				span.icon-twitter
+			.page-head__dish-link
+				a(href="http://dish.baltimoresun.com") powered by DishBaltimore.com
+
+
+
+		block link
+			- var selected = "Top Five"; //default
+
+		- var menu = {"Top Five":"index.html", "50 Best":"full-list.html", "Lists":"galleries.html"};
+
+		nav.page-nav
+			ul
+				each url, page in menu
+					if (selected == page)
+						li.active= page
+					else 
+						li
+							a(href=url)= page
+
+
+		block content
+
+
+		footer.page-footer
+			ul.page-footer__credits
+				li.title Contributors
+				li Suzanne Loudermilk
+				li Wesley Case
+			ul.page-footer__credits
+				li.title Design &amp; Development
+				li Caroline Pate
+				li Jin Kim
+			.page-footer__dish powered by
+				br
+				a(href="http://dish.baltimoresun.com")
+					img(src="http://dish.baltimoresun.com/view/templates/images/dish-logo.png")
+			.page-footer__logo
+				a(href="http://www.baltimoresun.com")
+					img(src="images/baltimore-sun-logo-white.png" border="0")
+
+		
+		//Javascript
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+		script.
+			window.jQuery || document.write('<script src="scripts/min/jquery-1.10.2.min.js">\x3C/script>')
+		script(src="scripts/min/app.min.js")
+
+

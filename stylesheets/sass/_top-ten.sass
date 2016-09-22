@@ -1,0 +1,127 @@
+/* Top Ten            */
+/* ------------------ */
+/* prefixed with .tt- */
+
+
+.tt
+
+	&-row
+	
+		@media (min-width: $bp-3 + 1)
+			+clearfix
+			padding-bottom: 30px
+			border-bottom: 1px solid $bordercolor
+			margin-bottom: 30px
+
+		&:last-child, &:last-child .tt-rest
+			border: 0
+			margin: 0			
+
+	&-rest
+		
+		@media (min-width: $bp-3 + 1)
+
+			&.-half
+				width: 50%
+				float: left
+
+			&.-left
+				padding-right: 3%
+
+			&.-right
+				padding-left: 3%
+
+		@media (max-width: $bp-3)
+			padding-bottom: 30px
+			border-bottom: 1px solid $bordercolor
+			margin-bottom: 30px
+
+		
+		&__image
+			padding-bottom: 8px //accommodates box-shadow
+			margin-bottom: 15px
+
+			@media (min-width: $bp-3 + 1)
+
+				&.-fill
+					width: 100%
+
+				&.-half-left
+					width: 50%
+					float: left
+					padding-right: 3%
+					margin-right: 3%
+
+				&.-half-right
+					width: 50%
+					float: right
+					padding-left: 3%
+					margin-left: 3%
+
+			img
+				display: block
+				width: 100%
+
+				&.-desktop-only
+					@media (max-width: $bp-lg)
+						display: none	
+
+				&.-mobile
+					@media (min-width: $bp-lg + 1)
+						display: none
+
+		&__info
+			color: white
+
+			@media (min-width: $bp-3 + 1)
+			
+				&.-right-align
+					text-align: right
+		
+			&__main
+
+				@media (min-width: $bp-3 + 1)
+	
+					&.-quarter
+						width: 25%
+						float: left
+						margin: 0 20px 20px 0
+		
+		&__name
+			font:
+				size: 40px
+				weight: 300
+			// color: $red-1
+			line-height: 1
+			+links(white, none)
+			a:hover
+				opacity: 0.7
+
+			@media (max-width: $bp-1)
+				font-size: 32px
+
+		&__neighborhood
+			text-transform: uppercase
+			font-size: 18px
+			color: $red-1
+			margin: 10px 0 15px 0
+			@media (max-width: $bp-1)
+				font-size: 16px
+		
+		&__blurb
+			color: #999
+			font-size: 18px
+			line-height: 1.5
+			margin-bottom: 10px
+		
+			@media (max-width: $bp-1)
+				font-size: 16px
+
+		&__arrow
+			text-align: right
+			font-size: 28px
+			+links(white, none)
+			a:hover
+				color: $red-1
+
+

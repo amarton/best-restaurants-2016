@@ -1,0 +1,83 @@
+.brb-container {
+  display: table;
+  width: 1280px;
+  height: 200px;
+  background-color: black;
+  background-image: url("http://dish.baltimoresun.com/best-restaurants-2015/barker-resources/images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: "Lato", sans-serif; }
+  .brb-container *, .brb-container *:before, .brb-container *:after {
+    box-sizing: border-box; }
+  @media (max-width: 1280px) {
+    .brb-container {
+      width: 100%; } }
+
+.brb-logo {
+  display: table-cell;
+  vertical-align: middle;
+  width: 270px;
+  padding: 0 0 0 20px;
+  text-align: center; }
+  .brb-logo img {
+    display: inline;
+    width: 100%; }
+    @media (max-width: 400px) {
+      .brb-logo img {
+        width: 240px; } }
+  @media (max-width: 550px) {
+    .brb-logo {
+      width: 225px; } }
+  @media (max-width: 400px) {
+    .brb-logo {
+      width: auto;
+      padding: 0 30px; } }
+.brb-links {
+  display: table-cell;
+  vertical-align: middle; }
+  @media (max-width: 750px) {
+    .brb-links {
+      padding: 0 50px; } }
+  @media (max-width: 500px) {
+    .brb-links {
+      padding: 0 20px; } }
+  @media (max-width: 400px) {
+    .brb-links {
+      display: none; } }
+  .brb-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    .brb-links ul a:link, .brb-links ul a:visited, .brb-links ul a:hover, .brb-links ul a:active {
+      color: white;
+      text-decoration: none; }
+  .brb-links li {
+    display: inline-block;
+    margin: 0 10px;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-bottom: 3px solid #4c8c1c; }
+    .brb-links li:hover {
+      background-color: rgba(255, 255, 255, 0.5); }
+    @media (max-width: 750px) {
+      .brb-links li {
+        display: block;
+        margin: 0 0 10px 0; }
+        .brb-links li:last-child {
+          margin: 0; } }
+    .brb-links li a {
+      display: block;
+      padding: 20px 50px;
+      font-size: 22px; }
+      .brb-links li a:hover {
+        color: black; }
+      @media (max-width: 1000px) {
+        .brb-links li a {
+          padding: 15px 30px;
+          font-size: 20px; } }
+      @media (max-width: 850px) {
+        .brb-links li a {
+          padding: 10px 20px;
+          font-size: 18px; } }
