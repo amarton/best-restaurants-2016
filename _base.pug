@@ -50,7 +50,7 @@ html(class="no-js", lang="en")
 		include includes/ad-for-header.html
 
 	body
-		script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
+		script(src="http://www.baltimoresun.com/thirdpartyservice?disablenav=true&disablessor=true", async)
 		div(data-trb-thirdpartynav)
 			//.tophat-share-tools
 				span.icon-facebook
@@ -106,6 +106,8 @@ html(class="no-js", lang="en")
 			.page-footer__logo
 				a(href="http://www.baltimoresun.com")
 					img(src="images/baltimore-sun-logo-white.png" border="0")
+				<br>
+				a.footer(href="http://www.tronc.com/privacy-policy/") Privacy Policy
 
 		//Javascript
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
