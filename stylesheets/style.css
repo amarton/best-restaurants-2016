@@ -4546,8 +4546,18 @@ a.footer {
   background-color: #222222;
   margin: 60px auto 0 auto;
   text-align: center; }
-  @media (max-width: 730px) {
+  @media (max-width: 743px) {
     #leaderboard {
+      display: none; } }
+
+.ad-mobile {
+  height: 50px;
+  width: 300px;
+  background-color: #222222;
+  margin: 60px auto 0 auto;
+  text-align: center; }
+  @media (min-width: 743px) {
+    .ad-mobile {
       display: none; } }
 
 /* Nav */
